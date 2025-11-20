@@ -47,6 +47,8 @@
             if($user){
                 if(password_verify($password, $user['password'])){
                     echo "Login successful!";
+                    header("Location: dashboard.php");
+                    exit();
                 } else {
                     echo "Invalid password.";
                 }

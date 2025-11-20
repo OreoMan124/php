@@ -71,6 +71,8 @@
         try{
             mysqli_query($conn, $sql);
             echo "Registration Successful!";
+            header("Location: login.php");
+            exit();
         } 
         
         catch(mysqli_sql_exception){
