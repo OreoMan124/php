@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="dashboard.css">
 <title>Dashboard</title>
 
+<?php 
+    include("database.php");
+?>
 
 
 
@@ -33,6 +36,11 @@
 <div class="content-box">
     <h2>Dashboard Content</h2>
     <p>This is where the main dashboard content will go.</p>
+</div>
+
+<div class="search-bar">
+    <input type="text" name="search" required placeholder="Search...">
+    <button type="submit" class="search-btn">Search</button>
 </div>
 </body>
 </html>
