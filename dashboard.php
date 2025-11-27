@@ -40,10 +40,37 @@
 
 <div class="search-bar">
     <form method="post" action="#">
-    <input type="text" name="search" required placeholder="Search...">
+    <input type="text" name="search" required placeholder="Search Email Adress...">
     <button type="submit" class="search-btn">Search</button>
 
 </form>
 </div>
 </body>
 </html>
+
+
+<?php
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if($search != ""){
+            $query = "SELECT * FROM usertable WHERE emailadress LIKE '%$search%'";
+            $result = mysqli_query($conn, $query);
+
+            if(mysqli_num_rows($result) > 0){
+                echo "<h3>Search Results:</h3>";
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "Results: <br>" . $row['emailadress'] . "<br>". $row['firstname'] . " " . $row['lastname'] . "<br><br>";
+                }
+            } else {
+                echo "No results found for '$search'.";
+            }
+        } else {
+            echo "Please enter a search term.";
+        }
+    }
+
+
+
+?>
