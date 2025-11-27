@@ -39,8 +39,11 @@
 </div>
 
 <div class="search-bar">
+    <form method="post" action="#">
     <input type="text" name="search" required placeholder="Search...">
     <button type="submit" class="search-btn">Search</button>
+
+</form>
 </div>
 </body>
 </html>

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+
+
 body {
 margin: 0;
 padding: 0;
@@ -91,13 +96,19 @@ input:focus {
 }
 
 .search-btn {
-    padding: 14px 20px;
+    background: #cccccc;
+    color: #000;
     border: none;
-    border-radius: 8px;
-    background-color: #4b4b57;
-    color: #fff;
-    font-size: 1.4rem;
+    border-radius: 35px;
+    padding: 15px 45px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    font-family: Italiana;
+}
+
+.search-btn:hover {
+    background: #ddd;
 }
 
